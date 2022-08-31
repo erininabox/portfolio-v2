@@ -1,0 +1,8 @@
+$primary: rgb(4, 4, 68);
+$secondary: rgb(255, 95, 80);
+$white: rgb(216, 212, 254);
+
+.body__dark {
+    background-color: $primary;
+    color: $white;
+}

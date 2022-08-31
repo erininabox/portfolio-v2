@@ -1,0 +1,17 @@
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav__ul {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.nav__ul>li {
+    padding-left: 20px;
+    padding-right: 10px;
+    display: inline;
+}

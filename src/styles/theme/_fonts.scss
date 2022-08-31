@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Fira+Sans+Condensed&family=Oswald:wght@300&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=JetBrains+Mono&family=Oxygen+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Merriweather&family=Noto+Serif&display=swap');
+
+$sans: "Atkinson Hyperlegible", "Oxygen", sans-serif;
+$condensed: "Oswald", "Barlow Condensed", "Fira Sans Condensed", "Roboto Condensed", sans-serif;
+$mono: "JetBrains Mono", "Inconsolata", "Oxygen Mono";
+$serif: "Bitter", "Merriweather", "Noto Serif", serif;
+
+$size-xxs: 0.75rem;
+$size-xs: 0.875rem;
+$size-sm: 1rem;
+$size-base: 1.125rem;
+$size-lg: 1.25rem;
+$size-xl: 1.6rem;
+$size-2xl: 1.875rem;
+$size-3xl: 2rem;
+
+$line-height-1: 1;
+$line-height-2: 1.25;
+$line-height-3: 1.5;
+$line-height-4: 2.0;
+
+h1 {
+    font-family: $mono;
+    font-weight: 800;
+    font-size: $size-3xl;
+    line-height: $line-height-4;
+}
+h2 {
+    font-family: $mono;
+    font-weight: 800;
+    font-size: $size-2xl;
+    line-height: $line-height-2;
+}
+h3 {
+    font-family: $condensed;
+    font-weight: 800;
+    font-size: $size-xl;
+    line-height: $line-height-1;
+}
+h4 {
+    font-family: $serif;
+    font-weight: 700;
+    font-size: $size-base;
+    line-height: $line-height-1;
+}
+p, ul, li, a {
+    font-family: $sans;
+    font-size: $size-base;
+    line-height: $line-height-3;
+}
