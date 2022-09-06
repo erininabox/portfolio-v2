@@ -16,6 +16,7 @@ $size-lg: 1.25rem;
 $size-xl: 1.6rem;
 $size-2xl: 1.875rem;
 $size-3xl: 2rem;
+$size-4xl: 3rem;
 
 $line-height-1: 1;
 $line-height-2: 1.25;
@@ -25,7 +26,7 @@ $line-height-4: 2.0;
 h1 {
     font-family: $mono;
     font-weight: 800;
-    font-size: $size-3xl;
+    font-size: $size-4xl;
     line-height: $line-height-4;
 }
 h2 {

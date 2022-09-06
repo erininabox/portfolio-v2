@@ -1,17 +1,30 @@
+@import "../theme/_colors.scss";
 
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $primary;
 }
 
-.nav__ul {
-    list-style-type: none;
+.nav__ol {
     margin-right: 20px;
+    list-style: none;
+    counter-reset: li;
 }
-
-.nav__ul>li {
+.nav__ol>li:before {
+    content: "0" counter(li) ".";
+    color: $secondary;
+    display: inline-block;
+    width: 1em;
+    margin-right: 1em;
+}
+.nav__ol>li {
     padding-left: 20px;
     padding-right: 10px;
     display: inline;
+    counter-increment: li;
 }

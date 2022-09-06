@@ -1,0 +1,14 @@
+@import '../theme/all.sass';
+
+.contact {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-greeting {
+    font-size: $size-2xl;
+}
+.contact-text {
+    font-size: $size-lg;
+    padding-bottom: 20px;
+}

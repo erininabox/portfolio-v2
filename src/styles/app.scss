@@ -19,5 +19,21 @@ a {
 * {
   box-sizing: border-box;
 }
-
-
+main {
+  width: 60%;
+  margin: 0 auto;
+}
+.landing-greeting {
+  margin: 80px auto;
+  display: flex;
+}
+.landing-profile-pic-container {
+  max-width: 20vw;
+  height: auto;
+  margin-right: 40px;
+}
+.landing-profile-pic {
+  max-width: 20vw;
+  height: auto;
+  border: solid 4px $white;
+}
