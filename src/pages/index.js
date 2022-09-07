@@ -35,6 +35,7 @@ queryPItemsSnapshot.forEach((doc) => {
   portfolioItems.push(doc.data())
 })
 
+console.log(portfolioItems)
 
 export default function Home() {
   

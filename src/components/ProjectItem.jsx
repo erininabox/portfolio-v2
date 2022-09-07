@@ -1,12 +1,15 @@
 import React from 'react'
 
 const ProjectItem = (props) => {
-    let name = props.name;
+  console.log("Props" + props.data)
+  let name = props.data.name;
+  let id = props.id;
 
   return (
     <div>
         ProjectItem
-        {name}
+        <p />{name}
+        <p />{id}
 
     </div>
   )
