@@ -1,4 +1,146 @@
+@import '../theme/all.sass';
+
 .portfolio {
-    width: 60%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.portfolio__header {
+    width: 100%;
+}
+
+.project {
+    max-width: 29%;
+    min-width: 200px;
+    border: solid 2px $secondary;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 -2px 10px rgba(87, 65, 176, 0.692);
+    background-color: $primary--grey;
+    justify-items: flex-start;
+}
+.project--featured {
+    max-width: 45%;
+    min-width: 300px;
+    border: solid 2px $secondary;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 -2px 10px rgba(87, 65, 176, 0.692);
+    background-color: $primary--grey;
+}
+
+.project__img--featured {
+    width: 100%;
+    border: solid 1px $white;
+    background-color: $white;
+    grid-area: img;
+}
+.project__grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title title"
+        "org-role org-role"
+        "description description"
+        "tstack tstack"
+        "links links";
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+}
+
+.project__grid--featured {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "img img"
+        "title links"
+        "org-role org-role"
+        "description description"
+        "tstack tstack";
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    align-items: center;
+}
+
+.project__title {
+    grid-area: title;
+    line-height: 1;
+    margin: 15px 0;
+}
+.project__title--featured {
+    grid-area: title;
+    line-height: 1;
+    margin: 15px 0;
+}
+.project__title--featured:before {
+    content: '>  ';
+    color: $secondary;
+    font-family: $mono;
+}
+.project__repo {
+    color: $secondary;
+    grid-area: links;
+    margin: 0;
+    align-content: right;
+}
+.project__repo--featured {
+    color: $secondary;
+    grid-area: links;
+    justify-self: right;
+    margin: 15px 0;
+}
+.project__repo-icon {
+    font-size: $size-lg;
+    padding: 4px 4px 0 4px;
+}
+.project__repo-icon--featured {
+    font-size: $size-lg;
+    padding: 4px 4px 0 4px;
+}
+.project__description {
+    grid-area: description;
+    margin: 0;
+    padding-bottom: 7px;
+    border-bottom: 0.5px solid $white;
+}
+.project__description--featured {
+    grid-area: description;
+    margin: 0;
+    padding-bottom: 7px;
+    border-bottom: 0.5px solid $white;
+}
+.project__org-role {
+    grid-area: org-role;
+    margin: 0;
+    font-family: $condensed;
+    font-weight: 700;
+    font-size: $size-sm;
+    color: $secondary
+}
+.project__org-role--featured {
+    grid-area: org-role;
+    margin: 0;
+    font-family: $condensed;
+    font-weight: 700;
+    font-size: $size-sm;
+    color: $secondary
+}
+.project__tstack {
+    grid-area: tstack;
+    margin: 5px 0;
+    font-family: $mono;
+    font-size: $size-xs;
+}
+.project__tstack--featured {
+    grid-area: tstack;
+    margin: 5px 0;
+    font-family: $mono;
+    font-size: $size-xs;
 }

@@ -23,6 +23,11 @@ $line-height-2: 1.25;
 $line-height-3: 1.5;
 $line-height-4: 2.0;
 
+p, ul, li, a, body {
+    font-family: $sans;
+    font-size: $size-base;
+    line-height: $line-height-3;
+}
 h1 {
     font-family: $mono;
     font-weight: 800;
@@ -42,13 +47,8 @@ h3 {
     line-height: $line-height-1;
 }
 h4 {
-    font-family: $serif;
+    font-family: $mono;
     font-weight: 700;
     font-size: $size-base;
     line-height: $line-height-1;
-}
-p, ul, li, a {
-    font-family: $sans;
-    font-size: $size-base;
-    line-height: $line-height-3;
 }

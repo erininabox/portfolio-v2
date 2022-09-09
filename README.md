@@ -19,3 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## To Do:
 [] Add in typing animation to landing page
 [] Add in smooth scrolling (try out react-scroll - see: https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react)
+[] SEO
+[] Add general low-key animations like for buttons
+[] Fully implement responsiveness
