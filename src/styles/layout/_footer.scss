@@ -1,3 +1,6 @@
+@import '../theme/all.sass';
+@import '../utilities/all.sass';
+
 .footer {
     margin: 0;
     padding: 10px;
@@ -5,4 +8,15 @@
     flex-direction: column;
     position: fixed;
     bottom: 0;
+}
+
+@media (max-width: $tablet) {
+    .footer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: auto;
+        display: inline;
+    }
+
 }

@@ -1,0 +1,50 @@
+@import "../theme/all.sass";
+@import "../utilities/all.sass";
+
+
+.icon {
+    font-size: $size-xl;
+    margin: 5px;
+}
+
+.icon__footer {
+    color: $secondary;
+    padding-left: 5px;
+    padding-right:5px;
+}
+
+.icon__para {
+    color: $secondary;
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto minmax(20px, 1fr);
+    align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+    width: 100%;
+    margin-top: 100px;
+}
+.header:after {
+    content: '';
+    border-top: 1px solid;
+}
+
+.sections {
+    counter-reset: h2;
+    margin-top: 100px;
+}
+
+.header:before {
+    counter-increment: h2;
+    content: "0" counter(h2) ".";
+    color: $secondary;
+}
+
+.bottom {
+    margin-top: 400px;
+}

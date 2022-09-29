@@ -37,3 +37,30 @@ main {
   height: auto;
   border: solid 4px $white;
 }
+@media (max-width: $tablet) {
+  main {
+    width: 100%;
+    padding: 15px;
+  }
+  .landing-greeting {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+    font-size: $size-base;
+  }
+  .landing-profile-pic {
+    max-width: 100%;
+    height: auto;
+  }
+  .landing-profile-pic-container {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .landing__header > h1 {
+    font-size: $size-xl;
+  }
+  .landing-description > h2 {
+    font-size: $size-base;
+  }
+}

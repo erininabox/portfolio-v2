@@ -8,6 +8,7 @@ const Portfolio = (props) => {
 
     let regularProjectItems = [];
     let featuredProjectItems = [];
+    // console.log(regularProjectItems);
 
     props.data.filter((item) => {
         if (item.featured === true) {
@@ -17,22 +18,25 @@ const Portfolio = (props) => {
         }
     });
 
+    const renderFeaturedComps = () => featuredProjectItems.map((item, idx) => {
+        // console.log(idx)
+        return (
+            <FeaturedProjectItem data={item} key={idx} />
+        )
+    })
+  
+    const renderPortfolioComps = () => regularProjectItems.map((item, idx) => {
+        // console.log(idx)
+        return(<ProjectItem data={item} key={idx} />)
+    })
 
-    console.log("Portfolio Items: " + regularProjectItems.map(item => {return item.name}))
-    console.log("Featured Portfolio Items: " + featuredProjectItems.map(item => {return item.name}))
 
-
-    // })
   return (
     <div className='portfolio'>
         <h3 className='portfolio__header'>Featured Projects</h3>
-        {featuredProjectItems.map((item) => {
-            return <FeaturedProjectItem data={item} key={item.id} />
-        })}
+        {renderFeaturedComps()}
         <h3 className='portfolio__header'>Additional Projects</h3>
-        {regularProjectItems.map((item) => {
-            return <ProjectItem data={item} key={item.id} />
-        })}
+        {renderPortfolioComps()}
         
     </div>
   )

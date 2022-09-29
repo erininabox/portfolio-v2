@@ -7,7 +7,7 @@ const FeaturedProjectItem = props => {
     let img = props.data.img;
     // console.log("img ==>" + img)
     let org = props.data.org;
-    console.log(org);
+    // console.log(org);
     let repos = props.data.repo; // will return array
     // console.log(repos[0]);
     let role = props.data.role;

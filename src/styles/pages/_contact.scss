@@ -1,4 +1,5 @@
-@import '../theme/all.sass';
+@import "../theme/all.sass";
+@import "../utilities/all.sass";
 
 .contact {
     margin: 0 auto;
@@ -11,4 +12,7 @@
 .contact-text {
     font-size: $size-lg;
     padding-bottom: 20px;
+}
+.contact__links {
+    margin-top: 20px;
 }

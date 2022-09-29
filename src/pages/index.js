@@ -35,7 +35,9 @@ queryPItemsSnapshot.forEach((doc) => {
   portfolioItems.push(doc.data())
 })
 
-console.log(portfolioItems)
+// Get Experience Items
+
+// console.log(portfolioItems)
 
 export default function Home() {
   
@@ -64,8 +66,8 @@ export default function Home() {
           <About />
           <h2 className='numbered header' id='portfolio'>Portfolio</h2>
           <Portfolio data={portfolioItems} />
-          <h2 className='numbered header' id='experience'>Experience</h2>
-          <Experience />
+          {/* <h2 className='numbered header' id='experience'>Experience</h2>
+          <Experience /> */}
           <h2 className='numbered header' id='contact'>Contact</h2>
           <Contact />
         </div>

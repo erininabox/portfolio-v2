@@ -1,4 +1,5 @@
-@import "../theme/_colors.scss";
+@import "../theme/all.sass";
+@import "../utilities/all.sass";
 
 .nav {
     display: flex;
@@ -27,4 +28,68 @@
     padding-right: 10px;
     display: inline;
     counter-increment: li;
+}
+.nav__bars {
+    visibility: hidden;
+}
+input[type="checkbox"], .menu, .close {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: $tablet) {
+    .nav {
+        background-color: transparent;
+        position: sticky;
+        top: 0;
+        right: 0;
+        margin-top: 1rem;
+
+        &__toggle {
+            position: absolute;
+            cursor: pointer;
+            margin: 0rem 1rem;
+            right: 0;
+        }
+        .menu, .close {
+            width: 1.5rem;
+            visibility: visible;
+            background-color: $primary;
+            opacity: 0.8;
+        }
+        .close {
+            display: none;
+        }
+        .menu {
+            margin-top: 0.2rem;
+        }
+
+        &__ol {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 1rem;
+            align-items: flex-end;
+
+            li {
+                display: none;
+            }
+        }
+
+    }
+    #nav__checkbox:checked ~ ol.nav__ol li {
+        display: block;
+    }
+    #nav__checkbox:checked ~ label.nav__toggle .close {
+        display: block;
+        opacity: 0.8;
+        background-color: $primary;
+    }
+    #nav__checkbox:checked ~ label.nav__toggle .menu {
+        display: none;
+    }
+    .nav__checkbox:checked ~ ol.nav__ol {
+        background-color: $primary;
+        opacity: 0.8;
+    }
 }

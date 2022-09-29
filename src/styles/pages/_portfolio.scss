@@ -1,4 +1,5 @@
-@import '../theme/all.sass';
+@import "../theme/all.sass";
+@import "../utilities/all.sass";
 
 .portfolio {
     margin: 0 auto;
@@ -6,7 +7,13 @@
     flex-wrap: wrap;
     width: 100%;
 }
-
+@media(max-width: $desktop){
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
 .portfolio__header {
     width: 100%;
 }
@@ -16,7 +23,7 @@
     min-width: 200px;
     border: solid 2px $secondary;
     margin: 15px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 -2px 10px rgba(87, 65, 176, 0.692);
     background-color: $primary--grey;
@@ -44,7 +51,7 @@
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "title title"
+    "title title"
         "org-role org-role"
         "description description"
         "tstack tstack"
@@ -59,15 +66,15 @@
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "img img"
-        "title links"
+    "img img"
+    "title links"
         "org-role org-role"
         "description description"
         "tstack tstack";
-    grid-column-gap: 5px;
-    grid-row-gap: 0px;
-    align-items: center;
-}
+        grid-column-gap: 5px;
+        grid-row-gap: 0px;
+        align-items: center;
+    }
 
 .project__title {
     grid-area: title;
@@ -106,19 +113,19 @@
 }
 .project__description {
     grid-area: description;
-    margin: 0;
-    padding-bottom: 7px;
+    margin: 0 0 10px 0;
+    padding-bottom: 15px;
     border-bottom: 0.5px solid $white;
 }
 .project__description--featured {
     grid-area: description;
-    margin: 0;
-    padding-bottom: 7px;
+    margin: 0 20px;
+    padding: 20px 0;
     border-bottom: 0.5px solid $white;
 }
 .project__org-role {
     grid-area: org-role;
-    margin: 0;
+    margin: 0 0 10px 0;
     font-family: $condensed;
     font-weight: 700;
     font-size: $size-sm;
@@ -127,6 +134,7 @@
 .project__org-role--featured {
     grid-area: org-role;
     margin: 0;
+    padding: 5px 20px 0 20px;
     font-family: $condensed;
     font-weight: 700;
     font-size: $size-sm;
@@ -143,4 +151,18 @@
     margin: 5px 0;
     font-family: $mono;
     font-size: $size-xs;
+    padding: 10px 20px;
+}
+@media (max-width: $tablet) {
+    .project {
+        margin: 20px auto;
+        padding: 10px;
+        max-width: 98%;
+        min-width: 98%;
+    }
+    .project--featured {
+        margin: 20px auto;
+        max-width: 98%;
+        min-width: 98%;
+    }
 }
