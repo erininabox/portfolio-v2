@@ -3,13 +3,16 @@ import React from 'react'
 
 const FeaturedProjectItem = (props) => {
     let name = props.data.name;
-    let demo = props.data.demo; // may be empty
+    let demo = props.data.demo; 
+        // may be empty
     let description = props.data.description;
     let img = props.data.img;
     let org = props.data.org;
-    let repos = props.data.repo; // will return array
+    let repos = props.data.repo; 
+        // will return array
     let role = props.data.role;
-    let techStack = props.data.techStack; // will return array
+    let techStack = props.data.techStack; 
+        // will return array
     // let year = props.data.year;
 
     return (
@@ -26,10 +29,12 @@ const FeaturedProjectItem = (props) => {
                 <a href={demo}><i className="project__repo-icon--featured fa-solid fa-arrow-up-right-from-square"></i></a>
             </span>
             
-            <p className='project__description--featured'>{description}</p>
+            <p className='project__description--featured'>
+                {description}
+            </p>
             
             <span className='project__org-role--featured'>
-                {role} // {org}
+                {role} \/\/ {org}
             </span>
             
             <span className='project__tstack--featured'>
