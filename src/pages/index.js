@@ -7,7 +7,6 @@ import Portfolio from '../components/Portfolio'
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { getAnalytics } from 'firebase/analytics';
-import Image from 'next/image'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAh8881qycsAOiMb-j0R1riDIRUDGZqtIE",
