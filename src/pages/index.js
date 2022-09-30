@@ -1,8 +1,8 @@
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
-import About from './About'
-import Contact from './Contact'
-import Portfolio from './Portfolio'
+import About from '../components/About'
+import Contact from '../components/Contact'
+import Portfolio from '../components/Portfolio'
 
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';

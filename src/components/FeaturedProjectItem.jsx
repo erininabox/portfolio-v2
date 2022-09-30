@@ -34,7 +34,7 @@ const FeaturedProjectItem = (props) => {
             </p>
             
             <span className='project__org-role--featured'>
-                {role} \/\/ {org}
+                {role} | {org}
             </span>
             
             <span className='project__tstack--featured'>

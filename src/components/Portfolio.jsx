@@ -1,6 +1,6 @@
 import React from 'react'
-import FeaturedProjectItem from '../components/FeaturedProjectItem';
-import ProjectItem from '../components/ProjectItem';
+import FeaturedProjectItem from './FeaturedProjectItem';
+import ProjectItem from './ProjectItem';
 
 
 const Portfolio = (props) => {

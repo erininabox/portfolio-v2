@@ -28,7 +28,7 @@ const ProjectItem = (props) => {
           </span>
           <p className='project__description'>{description}</p>
           <span className='project__org-role'>
-              {role} \/\/ {org}
+              {role} | {org}
           </span>
 
         <span className='project__tstack'>
