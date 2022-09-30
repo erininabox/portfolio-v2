@@ -19,7 +19,7 @@ export default function Document() {
           gtag('config', 'G-X0J5R98E7C');
         `}
       </Script>
-      <Script src="https://kit.fontawesome.com/35eb533387.js" crossOrigin="anonymous" strategy='beforeInteractive' async />
+      <script src="https://kit.fontawesome.com/35eb533387.js" crossOrigin="anonymous" strategy='beforeInteractive' async />
 
       <body className='body__dark'>
         <Main />
