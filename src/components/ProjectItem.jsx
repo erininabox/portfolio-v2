@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react'
 
 const ProjectItem = (props) => {
@@ -16,11 +15,11 @@ const ProjectItem = (props) => {
       <div className='project__grid'>   
           <h4 className='project__title'>{name}</h4>
           <span  className='project__repo'>
-              {repos.map((repo) => {
-                  return <Link href={repo}><i className="fa-brands fa-github project__repo-icon"></i></Link>
+              {repos.map((repo,index) => {
+                  return <a href={repo} key={index}><i className="fa-brands fa-github project__repo-icon"></i></a>
               })}
               { {demo} ? 
-                <Link href={demo}><i className="project__repo-icon fa-solid fa-arrow-up-right-from-square"></i></Link>
+                <a href={demo}><i className="project__repo-icon fa-solid fa-arrow-up-right-from-square"></i></a>
                 : ""
               }
           </span>
@@ -28,11 +27,16 @@ const ProjectItem = (props) => {
           <span className='project__org-role'>
               {role} // {org}
           </span>
-          <span className='project__tstack'>
-              {techStack.map((tech) => {
-                  return `${tech} `
-              })}
-          </span>
+
+        <span className='project__tstack'>
+          {techStack.map((tech, index) => {
+            return (
+              <span key={index} className='project__tstackitems' >
+                  {tech}
+              </span>
+            )
+          })}
+        </span>
       </div>          
 
     </div>

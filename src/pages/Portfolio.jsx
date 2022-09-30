@@ -5,36 +5,26 @@ import ProjectItem from '../components/ProjectItem';
 
 const Portfolio = (props) => {
 
-    let regularProjectItems = [];
-    let featuredProjectItems = [];
+    let regularProjectItems = props.data.filter((regular) => regular.featured===false && regular.display===true)
+    let featuredProjectItems = props.data.filter((featured) => featured.featured===true && featured.display===true)
 
-    props.data.filter((item) => {
-        if (item.featured === true) {
-            featuredProjectItems.push(item)
-        } else {
-            regularProjectItems.push(item)
-        }
-    });
+    const featuredList = featuredProjectItems.map((item) => 
+        <FeaturedProjectItem key={item.id} data={item} />
+    )
 
-    const renderFeaturedComps = () => featuredProjectItems.map((item, idx) => {
-        return (
-            <FeaturedProjectItem data={item} key={idx} />
-        )
-    })
-  
-    const renderPortfolioComps = () => regularProjectItems.map((item, idx) => {
-        return(<ProjectItem data={item} key={idx} />)
-    })
+    const regularList = regularProjectItems.map((item) => 
+        <ProjectItem data={item} key={item.id} />
+    )
 
 
-  return (
-    <div className='portfolio'>
-        <h3 className='portfolio__header'>Featured Projects</h3>
-        {renderFeaturedComps()}
-        <h3 className='portfolio__header'>Additional Projects</h3>
-        {renderPortfolioComps()}
-        
-    </div>
+    return (
+        <div className='portfolio'>
+            <h3 className='portfolio__header'>Featured Projects</h3>
+            {featuredList}
+            <h3 className='portfolio__header'>Additional Projects</h3>
+            {regularList}
+            
+        </div>
   )
 }
 

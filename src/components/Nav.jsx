@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react'
 
 const Nav = () => {
@@ -16,10 +15,9 @@ const Nav = () => {
       </label>
       
       <ol className='nav__ol'>
-        <li><Link href="/#about" className='nav__a' onClick={handleOnClick}>About</Link></li>
-        <li><Link href="/#portfolio" className='nav__a' onClick={handleOnClick}>Portfolio</Link></li>
-        <li><Link href="/#experience" className='nav__a' onClick={handleOnClick}>Experience</Link></li>
-        <li><Link href="/#contact" className='nav__a' onClick={handleOnClick}>Contact</Link></li>
+        <li><a href="https://erininabox.com/#about" className='nav__a' onClick={handleOnClick}>About</a></li>
+        <li><a href="https://erininabox.com/#portfolio" className='nav__a' onClick={handleOnClick}>Portfolio</a></li>
+        <li><a href="https://erininabox.com/#contact" className='nav__a' onClick={handleOnClick}>Contact</a></li>
       </ol>
     </div>
   )

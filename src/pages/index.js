@@ -47,7 +47,7 @@ export default function Home() {
       <main>
         <div className='landing-greeting'>
           <div className='landing-profile-pic-container'>
-            <Image src="/imgs/Erin.jpg" className='landing-profile-pic '/>
+            <img src="/imgs/Erin.jpg" className='landing-profile-pic' alt="photo of white woman with very short hair, hot pink lipstick and glasses"/>
           </div>
           <div className='landing__header'>
             <h1>
