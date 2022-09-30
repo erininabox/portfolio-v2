@@ -11,7 +11,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-X0J5R98E7C" strategy="afterInteractive"></Script>
-      <Script id="google-analytics" strategy="afterInteractive"
+      <script id="google-analytics" strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
