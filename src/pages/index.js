@@ -2,12 +2,12 @@ import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import About from './About'
 import Contact from './Contact'
-import Experience from './Experience'
 import Portfolio from './Portfolio'
 
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { getAnalytics } from 'firebase/analytics';
+import Image from 'next/image'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAh8881qycsAOiMb-j0R1riDIRUDGZqtIE",
@@ -23,7 +23,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // initialize analytics - window check because SSR
-export const analytics = () => {
+export const analytics = async () => {
   return ((typeof window !== "undefined") ? 
   getAnalytics() : null);
 } 
@@ -47,11 +47,11 @@ export default function Home() {
       <main>
         <div className='landing-greeting'>
           <div className='landing-profile-pic-container'>
-            <img src="/imgs/Erin.jpg" className='landing-profile-pic '/>
+            <Image src="/imgs/Erin.jpg" className='landing-profile-pic '/>
           </div>
           <div className='landing__header'>
             <h1>
-                Hi! <i className="fa-solid fa-mug-hot icon__para"></i> I'm  Erin Halden,
+                Hi! <i className="fa-solid fa-mug-hot icon__para"></i> I am  Erin Halden,
             </h1>
           </div>
         </div>
@@ -66,8 +66,6 @@ export default function Home() {
           <About />
           <h2 className='numbered header' id='portfolio'>Portfolio</h2>
           <Portfolio data={portfolioItems} />
-          {/* <h2 className='numbered header' id='experience'>Experience</h2>
-          <Experience /> */}
           <h2 className='numbered header' id='contact'>Contact</h2>
           <Contact />
         </div>

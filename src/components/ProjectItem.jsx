@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const ProjectItem = (props) => {
@@ -16,10 +17,10 @@ const ProjectItem = (props) => {
           <h4 className='project__title'>{name}</h4>
           <span  className='project__repo'>
               {repos.map((repo) => {
-                  return <a href={repo}><i className="fa-brands fa-github project__repo-icon"></i></a>
+                  return <Link href={repo}><i className="fa-brands fa-github project__repo-icon"></i></Link>
               })}
               { {demo} ? 
-                <a href={demo}><i className="project__repo-icon fa-solid fa-arrow-up-right-from-square"></i></a>
+                <Link href={demo}><i className="project__repo-icon fa-solid fa-arrow-up-right-from-square"></i></Link>
                 : ""
               }
           </span>

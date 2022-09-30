@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 const FeaturedProjectItem = props => {
@@ -17,14 +19,14 @@ const FeaturedProjectItem = props => {
     return (
       <div className='project--featured'>
         <div className='project__grid--featured'>
-            <img src={img} className="project__img--featured" />    
+            <Image src={img} className="project__img--featured" />    
 
             <h4 className='project__title--featured'>{name}</h4>
             <span  className='project__repo--featured'>
                 {repos.map((repo) => {
-                    return <a href={repo}><i className="fa-brands fa-github project__repo-icon--featured"></i></a>
+                    return <Link href={repo}><i className="fa-brands fa-github project__repo-icon--featured"></i></Link>
                 })}
-                <a href={demo}><i className="project__repo-icon--featured fa-solid fa-arrow-up-right-from-square"></i></a>
+                <Link href={demo}><i className="project__repo-icon--featured fa-solid fa-arrow-up-right-from-square"></i></Link>
             </span>
             <p className='project__description--featured'>{description}</p>
             <span className='project__org-role--featured'>

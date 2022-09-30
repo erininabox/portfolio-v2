@@ -4,11 +4,9 @@ import ProjectItem from '../components/ProjectItem';
 
 
 const Portfolio = (props) => {
-    // console.log("Props" + props);
 
     let regularProjectItems = [];
     let featuredProjectItems = [];
-    // console.log(regularProjectItems);
 
     props.data.filter((item) => {
         if (item.featured === true) {
@@ -19,14 +17,12 @@ const Portfolio = (props) => {
     });
 
     const renderFeaturedComps = () => featuredProjectItems.map((item, idx) => {
-        // console.log(idx)
         return (
             <FeaturedProjectItem data={item} key={idx} />
         )
     })
   
     const renderPortfolioComps = () => regularProjectItems.map((item, idx) => {
-        // console.log(idx)
         return(<ProjectItem data={item} key={idx} />)
     })
 

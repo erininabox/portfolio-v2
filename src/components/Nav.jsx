@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Nav = () => {
@@ -15,10 +16,10 @@ const Nav = () => {
       </label>
       
       <ol className='nav__ol'>
-        <li><a href="/#about" className='nav__a' onClick={handleOnClick}>About</a></li>
-        <li><a href="/#portfolio" className='nav__a' onClick={handleOnClick}>Portfolio</a></li>
-        <li><a href="/#experience" className='nav__a' onClick={handleOnClick}>Experience</a></li>
-        <li><a href="/#contact" className='nav__a' onClick={handleOnClick}>Contact</a></li>
+        <li><Link href="/#about" className='nav__a' onClick={handleOnClick}>About</Link></li>
+        <li><Link href="/#portfolio" className='nav__a' onClick={handleOnClick}>Portfolio</Link></li>
+        <li><Link href="/#experience" className='nav__a' onClick={handleOnClick}>Experience</Link></li>
+        <li><Link href="/#contact" className='nav__a' onClick={handleOnClick}>Contact</Link></li>
       </ol>
     </div>
   )
