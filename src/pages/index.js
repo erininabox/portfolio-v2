@@ -14,7 +14,8 @@ const firebaseConfig = {
   projectId: "erininabox-98bc9",
   storageBucket: "erininabox-98bc9.appspot.com",
   messagingSenderId: "616370587206",
-  appId: "1:616370587206:web:c255980eecf297827bec47"
+  appId: "1:616370587206:web:c255980eecf297827bec47",
+  measurementId: "G-X0J5R98E7C"
 };
 
 // initialize firebase & firestore
