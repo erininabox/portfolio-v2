@@ -25,7 +25,7 @@ const db = getFirestore(app);
 // initialize analytics - window check because SSR
 export const analytics = async () => {
   return ((typeof window !== "undefined") ? 
-  getAnalytics() : null);
+  getAnalytics(app) : null);
 } 
 
 // Get Portfolio Items
