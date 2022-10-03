@@ -9,13 +9,13 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAh8881qycsAOiMb-j0R1riDIRUDGZqtIE",
-  authDomain: "erininabox-98bc9.firebaseapp.com",
-  projectId: "erininabox-98bc9",
-  storageBucket: "erininabox-98bc9.appspot.com",
-  messagingSenderId: "616370587206",
-  appId: "1:616370587206:web:c255980eecf297827bec47",
-  measurementId: "G-X0J5R98E7C"
+  apiKey: "AIzaSyBOtNsTA6PuROsNDWpM64Yx0GlPaMlHLrE",
+  authDomain: "erininabox-domain.firebaseapp.com",
+  projectId: "erininabox-domain",
+  storageBucket: "erininabox-domain.appspot.com",
+  messagingSenderId: "424637673018",
+  appId: "1:424637673018:web:43db98b70bf08f9a558f03",
+  measurementId: "G-G7D4BLKJVM"
 };
 
 // initialize firebase & firestore
