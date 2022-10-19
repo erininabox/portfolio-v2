@@ -2,9 +2,15 @@ import React from 'react'
 
 const Nav = () => {
 
-  const handleOnClick = () => {
+  const handleOnClick = (e) => {
+    e.preventDefault();
     document.getElementById("nav__checkbox").checked = false;
-  }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.getAttribute('href').scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  };
 
   return (
     <div className='nav'>

@@ -3,12 +3,13 @@
 
 .nav {
     display: flex;
+    width: 100vw;
     flex-direction: row;
     justify-content: flex-end;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: $primary;
+    background: linear-gradient($primary, rgba(0,0,0,0));
 }
 
 .nav__ol {
