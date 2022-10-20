@@ -2,8 +2,7 @@ import React from 'react'
 
 const Nav = () => {
 
-  const handleOnClick = (e) => {
-    e.preventDefault();
+  const handleOnClick = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.getAttribute('href').scrollIntoView({
               behavior: 'smooth'
