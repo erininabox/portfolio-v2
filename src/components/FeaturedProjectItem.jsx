@@ -18,15 +18,17 @@ const FeaturedProjectItem = (props) => {
     return (
       <div className='project--featured'>
         <div className='project__grid--featured'>
-            <img src={img} className="project__img--featured" alt="" />    
+            <a href={demo} className="project__imglink">
+                <img src={img} className="project__img--featured" alt="" />    
+            </a>
 
             <h4 className='project__title--featured'>{name}</h4>
             
             <span className='project__repo--featured'>
                 {repos.map((repo,index) => {
-                    return <a href={repo} key={index}><i className="fa-brands fa-github project__repo-icon--featured"></i></a>
+                    return <a href={repo} key={index}><i className="fa-brands fa-github project__repo-icon"></i></a>
                 })}
-                <a href={demo}><i className="project__repo-icon--featured fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href={demo}><i className="project__repo-icon fa-solid fa-arrow-up-right-from-square"></i></a>
             </span>
             
             <p className='project__description--featured'>
