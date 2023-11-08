@@ -43,7 +43,8 @@ export default function Home() {
   
   return (
     <div>
-      <Nav />
+      Coming soon...
+      {/* <Nav />
       <main>
         <div className='landing-greeting'>
           <div className='landing-profile-pic-container'>
@@ -73,7 +74,7 @@ export default function Home() {
 
         </div>
       </main>
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }
